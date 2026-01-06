@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files from project root (index.html etc.)
-app.use(express.static(path.join(__dirname)));
+// Serve static files from 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 let transporterPromise;
 
